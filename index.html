@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WL Serviços de Informática | Suporte TI e Segurança</title>
+    <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+    <meta name="description" content="Suporte especializado em TI e instalação de câmeras de segurança. Soluções modernas para o seu negócio.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Configurações Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0a0a12',
+                            primary: '#00f2fe', // Ciano Neon
+                            secondary: '#4facfe', // Azul
+                            glass: 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Background Glow Effects -->
+    <div class="bg-glow"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-panel border-b-0 border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 rounded bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center font-bold text-xl">WL</div>
+                    <span class="text-cyan-400 font-light">Services</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Início</a>
+                        <a href="#servicos" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Serviços</a>
+                        <a href="#sobre" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Sobre</a>
+                        <a href="#contato" class="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-5 py-2 rounded-full font-medium transition-all shadow-lg shadow-cyan-500/20">Fale Conosco</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden glass-panel border-t border-white/5" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 hover:text-cyan-400">Início</a>
+                <a href="#servicos" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 hover:text-cyan-400">Serviços</a>
+                <a href="#sobre" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 hover:text-cyan-400">Sobre</a>
+                <a href="#contato" class="block px-3 py-2 text-cyan-400 font-bold">Fale Conosco</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Abstract Tech Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-brand-dark/90 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=2000&auto=format&fit=crop" alt="Server Room" class="w-full h-full object-cover opacity-30">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 flex flex-col-reverse lg:flex-row items-center gap-12">
+            <!-- Text Content -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <div class="inline-block px-4 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm font-semibold mb-6 backdrop-blur-sm">
+                    Suporte TI & Segurança
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Foco no seu negócio.<br>
+                    <span class="text-gradient">Nós cuidamos da TI.</span>
+                </h1>
+                <p class="text-gray-300 text-lg mb-8 max-w-lg mx-auto lg:mx-0">
+                    Soluções completas em infraestrutura, suporte técnico e instalação de câmeras de segurança. Proteção e performance para sua empresa.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contato" class="px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 font-semibold text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all transform hover:-translate-y-1">
+                        Solicitar Orçamento
+                    </a>
+                    <a href="#servicos" class="px-8 py-3 rounded-full border border-white/20 hover:bg-white/5 transition-all font-semibold text-white">
+                        Nossos Serviços
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image/Illustration -->
+            <div class="w-full lg:w-1/2 flex justify-center animate-float">
+                <div class="relative w-full max-w-md aspect-square">
+                    <!-- Glass Container simulating Server/Tech -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 rounded-2xl blur-2xl"></div>
+                    <div class="relative glass-card rounded-2xl p-6 h-full border border-white/10 flex flex-col justify-between overflow-hidden">
+                         <!-- Decorative elements -->
+                         <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/20 rounded-full blur-2xl -mr-16 -mt-16"></div>
+                         
+                         <div class="space-y-4 relative z-10">
+                            <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+                                <i class="fas fa-shield-alt text-3xl text-cyan-400"></i>
+                                <div>
+                                    <h3 class="font-bold text-lg">Proteção Ativa</h3>
+                                    <p class="text-xs text-green-400">● Sistema Operante</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-white/5 p-3 rounded-lg border border-white/5">
+                                    <i class="fas fa-video text-cyan-300 mb-2"></i>
+                                    <div class="text-xs text-gray-400">Câmeras</div>
+                                    <div class="font-bold">Monitorando</div>
+                                </div>
+                                <div class="bg-white/5 p-3 rounded-lg border border-white/5">
+                                    <i class="fas fa-server text-blue-300 mb-2"></i>
+                                    <div class="text-xs text-gray-400">Servidor</div>
+                                    <div class="font-bold">Estável</div>
+                                </div>
+                            </div>
+                            
+                            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=800&auto=format&fit=crop" alt="AI Tech" class="rounded-lg opacity-80 mt-4 border border-white/10">
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossas <span class="text-gradient">Soluções</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Tecnologia de ponta para garantir a segurança e a produtividade da sua empresa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-2xl relative group">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-headset text-6xl text-cyan-400"></i>
+                    </div>
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 text-cyan-400 text-2xl border border-cyan-500/20">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Suporte de TI</h3>
+                    <p class="text-gray-400 mb-4">Manutenção preventiva e corretiva de computadores, notebooks e servidores. Resolução rápida de problemas para não parar seu negócio.</p>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li><i class="fas fa-check text-cyan-500 mr-2"></i>Helpdesk Remoto e Presencial</li>
+                        <li><i class="fas fa-check text-cyan-500 mr-2"></i>Otimização de Sistemas</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-2xl relative group">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-eye text-6xl text-cyan-400"></i>
+                    </div>
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 text-cyan-400 text-2xl border border-cyan-500/20">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Câmeras de Segurança</h3>
+                    <p class="text-gray-400 mb-4">Instalação e configuração de sistemas CFTV. Monitore seu patrimônio de qualquer lugar através do celular.</p>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li><i class="fas fa-check text-cyan-500 mr-2"></i>Acesso Remoto via App</li>
+                        <li><i class="fas fa-check text-cyan-500 mr-2"></i>Câmeras IP e Wi-Fi</li>
+                        <li><i class="fas fa-check text-cyan-500 mr-2"></i>Gravação em Nuvem/DVR</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-2xl relative group">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-network-wired text-6xl text-cyan-400"></i>
+                    </div>
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 text-cyan-400 text-2xl border border-cyan-500/20">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Redes & Infraestrutura</h3>
+                    <p class="text-gray-400 mb-4">Cabeamento estruturado, configuração de roteadores Wi-Fi de alta performance e segurança de rede.</p>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li><i class="fas fa-check text-cyan-500 mr-2"></i>Wi-Fi Corporativo</li>
+                        <li><i class="fas fa-check text-cyan-500 mr-2"></i>Firewall e Segurança</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-card p-8 rounded-2xl relative group">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-globe text-6xl text-cyan-400"></i>
+                    </div>
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 text-cyan-400 text-2xl border border-cyan-500/20">
+                        <i class="fas fa-sitemap"></i>
+                    </div>  
+                    <h3 class="text-xl font-bold mb-3">Web Site & Sistemas</h3>
+                    <p class="text-gray-400 mb-4">LandPage, Sistemas, Blog e Páginas de venda </p>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li><i class="fas fa-check text-cyan-500 mr-2"></i>Web sites em geral</li>
+                        <li><i class="fas fa-check text-cyan-500 mr-2"></i>Sistemas de gestão</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border border-white/5">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" alt="Sobre a WL Services" class="rounded-xl shadow-2xl shadow-cyan-500/20 border border-white/10">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">Visão Geral do <span class="text-gradient">Nosso Negócio</span></h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        A <strong class="text-white">WL Serviços de Informática</strong> nasceu com o objetivo de simplificar a tecnologia para empresas e residências. Entendemos que problemas de TI e falhas de segurança podem custar caro.
+                    </p>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        Nossa equipe é formada por profissionais qualificados, prontos para oferecer um atendimento ágil e personalizado. Combinamos técnica de ponta com um design de serviço focado na sua tranquilidade.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-2xl font-bold text-white">500+</h4>
+                            <p class="text-sm text-gray-400">Clientes Atendidos</p>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-white">24/7</h4>
+                            <p class="text-sm text-gray-400">Disponibilidade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12">
+                
+                <!-- Contact Info -->
+                <div class="w-full lg:w-1/3 space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Entre em <span class="text-gradient">Contato</span></h2>
+                        <p class="text-gray-400">Estamos prontos para atender sua demanda. Solicite um orçamento ou tire suas dúvidas.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-cyan-400 border border-white/10">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">WhatsApp / Telefone</p>
+                                <a href="https://wa.me/5521969479315" class="text-white font-semibold hover:text-cyan-400 transition-colors">(21) 96947-9315</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-cyan-400 border border-white/10">
+                                <i class="far fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">E-mail</p>
+                                <a href="mailto:contato@wlservices.com.br" class="text-white font-semibold hover:text-cyan-400 transition-colors">contato@wlservices.com.br</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-cyan-400 border border-white/10">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">Localização</p>
+                                <span class="text-white font-semibold">Rio de Janeiro, RJ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="w-full lg:w-2/3">
+                    <div class="glass-panel p-8 rounded-2xl">
+                        <form id="meuFormulario" action="https://formsubmit.co/ajax/contato@wlservices.com.br" method="POST" class="space-y-6">
+                            <!-- Configurações do FormSubmit -->
+                            <input type="hidden" name="_subject" value="Novo Contato via Site - WL Services">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_autoresponse" value="Obrigado por entrar em contato! Responderemos em breve.">
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-2">Nome Completo</label>
+                                    <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg input-glass focus:ring-2 focus:ring-cyan-500" placeholder="Seu nome">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-300 mb-2">Telefone / WhatsApp</label>
+                                    <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg input-glass focus:ring-2 focus:ring-cyan-500" placeholder="(21) 99999-9999">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">E-mail</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg input-glass focus:ring-2 focus:ring-cyan-500" placeholder="seu@email.com">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Assunto</label>
+                                <select name="subject" class="w-full px-4 py-3 rounded-lg input-glass focus:ring-2 focus:ring-cyan-500">
+                                    <option value="Suporte TI" class="text-black">Suporte TI</option>
+                                    <option value="Câmeras de Segurança" class="text-black">Câmeras de Segurança</option>
+                                    <option value="Redes" class="text-black">Redes</option>
+                                    <option value="Redes" class="text-black">Web Site</option>
+                                    <option value="Outros" class="text-black">Outros</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Mensagem</label>
+                                <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg input-glass focus:ring-2 focus:ring-cyan-500" placeholder="Como podemos ajudar?"></textarea>
+                            </div>
+
+                            <button type="submit" id="btnEnviar" class="w-full py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 font-bold text-white text-lg shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all transform hover:-translate-y-1">
+                                Enviar Mensagem
+                            </button>
+
+                            <div id="mensagemSucesso" class="hidden mt-4 p-4 rounded-lg bg-green-500/20 border border-green-500 text-green-400 text-center font-medium">
+                                <i class="fas fa-check-circle mr-2"></i> Mensagem enviada com sucesso! Entraremos em contato em breve.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-black/40 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center font-bold text-white">WL</div>
+                        <span class="text-cyan-400 font-light">Services</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Especialistas em manter seu negócio seguro e conectado. Tecnologia com transparência e eficiência.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-cyan-400 transition-colors">Início</a></li>
+                        <li><a href="#servicos" class="hover:text-cyan-400 transition-colors">Serviços</a></li>
+                        <li><a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre Nós</a></li>
+                        <li><a href="#contato" class="hover:text-cyan-400 transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Horário de Atendimento</h4>
+                    <p class="text-gray-400 text-sm mb-2">Segunda a Sexta: 09h às 18h</p>
+                    <p class="text-gray-400 text-sm">Sábado: 09h às 13h</p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="https://instagram.com/wlservices.inf" class="text-gray-400 hover:text-cyan-400 transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="mailto:wlservices@hotmail.com" class="text-gray-400 hover:text-cyan-400 transition-colors"><i class="fa-regular fa-envelope text-xl"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs text-center md:text-left">
+                    &copy; 2025 WL Serviços de Informática. Todos os direitos reservados.
+                </p>
+                <p class="text-gray-600 text-xs">
+                    Desenvolvido com tecnologia Glassmorphism
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5521979055374" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 transition-all hover:-translate-y-2 animate-bounce">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Script Simples para Navbar Glass effect no scroll -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-[#0a0a12]/90', 'backdrop-blur-xl', 'shadow-lg');
+                navbar.classList.remove('border-b-0');
+                navbar.classList.add('border-b', 'border-white/10');
+            } else {
+                navbar.classList.remove('bg-[#0a0a12]/90', 'backdrop-blur-xl', 'shadow-lg', 'border-b', 'border-white/10');
+                navbar.classList.add('border-b-0');
+            }
+        });
+
+        const form = document.getElementById('meuFormulario');
+        const btn = document.getElementById('btnEnviar');
+        const msgSucesso = document.getElementById('mensagemSucesso');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o redirecionamento
+
+            // Estética: Muda o texto do botão enquanto envia
+            btn.disabled = true;
+            btn.innerText = "Enviando...";
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch(form.action, {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Esconde o botão e mostra a mensagem de sucesso
+                    btn.classList.add('hidden');
+                    msgSucesso.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    alert("Erro ao enviar. Por favor, tente novamente.");
+                    btn.disabled = false;
+                    btn.innerText = "Enviar Mensagem";
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Ocorreu um erro na conexão.");
+                btn.disabled = false;
+                btn.innerText = "Enviar Mensagem";
+            });
+        });
+    </script>
+</body>
+</html>
