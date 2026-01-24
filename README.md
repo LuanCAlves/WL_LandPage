@@ -1,6 +1,6 @@
-# 💻 WL Serviços de Informática - Landing Page
+# 💻 WL Serviços de Informática - Institutional Page
 
-Uma Landing Page moderna, responsiva e de alta conversão desenvolvida para a **WL Serviços de Informática**, focada em suporte técnico de TI e sistemas de segurança CFTV.
+Uma Página Institucional moderna, responsiva e de alta conversão desenvolvida para a **WL Serviços de Informática**, focada em suporte técnico de TI e sistemas de segurança CFTV.
 
 ## 🚀 Tecnologias Utilizadas
 
