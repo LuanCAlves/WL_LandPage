@@ -22,7 +22,7 @@ Uma Página Institucional moderna, responsiva e de alta conversão desenvolvida 
 
 1.  Clone este repositório:
     ```bash
-    git clone [https://github.com/LuanCAlves/WL_LandPage.git](https://github.com/LuanCAlves/WL_LandPage.git)
+    git clone [https://github.com/LuanCAlves/WL_LandPage.git](https://github.com/LuanCAlves/WL-Services.git)
     ```
 2.  Abra o arquivo `index.html` em seu navegador de preferência.
 
